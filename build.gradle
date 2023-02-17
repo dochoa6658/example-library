@@ -44,3 +44,15 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = 'com.exmaple'
+            artifactId = 'example-library'
+            version = '1.0'
+
+            from components.java
+        }
+    }
+}
